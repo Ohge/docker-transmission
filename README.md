@@ -5,7 +5,7 @@ Transmission web GUI for Docker
 Clone the project
 > git clone git@github.com:Ohge/docker-transmission.git
 
-Alter the config `(optional)`
+Alter the config (optional)
 > vim settings.json
 
 Execute the build script
