@@ -1,1 +1,8 @@
-torrents/
+transmission/blocklists/
+transmission/complete/
+transmission/incoming/
+transmission/resume/
+transmission/torrents/
+transmission/settings.json
+transmission/stats.json
+transmission/dht.dat
