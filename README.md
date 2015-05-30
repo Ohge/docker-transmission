@@ -6,7 +6,7 @@ Clone the project
 > git clone git@github.com:Ohge/docker-transmission.git
 
 Alter the config (optional)
-> vim settings.json
+> vim transmission/settings.json
 
 Execute the build script
 > ./build.sh
