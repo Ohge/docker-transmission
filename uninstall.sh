@@ -11,13 +11,14 @@ IMG=$TYPE/$NAME
 APP=$USR.$NAME
 
 ### CHECK IF INSTALLED
-if ! [[ $(docker ps -a | awk '{print $NF}' | grep $APP) == *"$APP"* ]]; then
+RES=$(docker ps -a | awk '{print $NF}' | grep $APP)
+if ! [[ $RES == *"$APP"* ]]; then
   echo "Error: $APP not installed for this user"; exit 1
 fi
 
 ### STOP CONTAINER
-RES=$(docker ps -a | grep 'Up' | awk '{print $NF}' | grep -c '$APP')
-if [ $RES -gt 0 ]; then
+RES=$(docker ps -a | grep 'Up' | awk '{print $NF}' | grep $APP)
+if [[ $RES == *"$APP"* ]]; then
   RES=$(docker stop $APP)
 fi
 echo "-$APP stopped"
@@ -36,4 +37,4 @@ if [ $RES -eq 0 ]; then
 fi
 
 ### REMOVE 
-RES=$(docker images -notrunc | grep "^<none>" | awk '{print $1}' | xargs --no-run-if-empty docker rmi)
+RES=$(docker images | grep "^<none>" | awk '{print $1}' | xargs --no-run-if-empty docker rmi)
