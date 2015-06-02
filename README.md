@@ -31,7 +31,11 @@ Open your browser to start using the Transmission torrent client
 > http://host:port
 
 ## Future releases
+
 -Verify user is in docker group before install and uninstall.
+
 -Replace transmission web dir with username.
+
 -Write dynamic bookmarks file to home dir.
+
 -Test multi user support.
