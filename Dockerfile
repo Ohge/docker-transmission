@@ -10,12 +10,14 @@ RUN set -xe &&\
 RUN apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-### CREATE PERSISTENT VOLUME
-VOLUME ["/home/transmission"]
+### CREATE PERSISTENT VOLUMES
+VOLUME ["/etc/transmission-daemon"]
+VOLUME ["/downloads"]
 
 ### EXPOSE PORTS
 EXPOSE 9091
 EXPOSE 54321
+EXPOSE 54321/udp
 
 ### RUN SCRIPT
-CMD ["/home/transmission/transmission.sh"]
+CMD ["/etc/transmission-daemon/transmission.sh"]
