@@ -23,4 +23,4 @@ if [[ ! $(grep --quiet '$CONF_DIR' /etc/passwd) ]]; then
 fi
 
 ### START SERVICE USING RUNTIME UID AND GID
-exec su - $USRN -c "/usr/bin/transmission-daemon -f 2>&1" 2>/dev/null
+exec su - $USRN -c "/usr/bin/transmission-daemon -f -g $CONF_DIR 2>&1" 2>/dev/null
