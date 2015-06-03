@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Ohge <chris.ohge@gmail.com>
+MAINTAINER Ohge <https://github.com/Ohge>
 
 ### INSTALL DEPENDENCIES
 RUN set -xe &&\
