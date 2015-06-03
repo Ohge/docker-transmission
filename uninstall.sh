@@ -36,5 +36,5 @@ if [ $RES -eq 0 ]; then
   echo "-$IMG uninstalled"
 fi
 
-### REMOVE 
-RES=$(docker images | grep "^<none>" | awk '{print $1}' | xargs --no-run-if-empty docker rmi)
+### REMOVE TAGLESS CONTAINERS
+RES=$(docker images | grep "^<none>" | awk '{print $3}' | xargs --no-run-if-empty docker rmi)
