@@ -15,7 +15,7 @@ Persistent user directories:
 
 ## Installation
 Clone the project
-> git clone git@github.com:Ohge/docker-transmission.git
+> git clone https://github.com/Ohge/docker-transmission.git
 
 Alter the config (optional)
 > vim transmission/settings.json
@@ -31,11 +31,10 @@ Open your browser to start using the Transmission torrent client
 > http://host:port
 
 ## Future releases
+-Write dynamic bookmarks file to home dir.
 
 -Verify user is in docker group before install and uninstall.
 
+-Authenticate using users credentials.
+
 -Replace transmission web dir with username.
-
--Write dynamic bookmarks file to home dir.
-
--Test multi user support.
