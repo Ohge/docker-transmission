@@ -31,10 +31,10 @@ Open your browser to start using the Transmission torrent client
 > http://host:port
 
 ## Future releases
--Update dynamic bookmarks RSS file to users home dir during install and uninstall.
-
--Add a persistent blocklist downloader to install and start scripts.
+-Update a dynamic bookmarks RSS file to users home dir during install and uninstall to track their apps.
 
 -Switch to init.d daemon start/stop/reload methods, and "tail -f" the transmission log file as CMD.
 
--Add external scripts to users home dir that call "docker exec" the start/stop/reload commands.
+-Add external scripts to users home dir that use "docker exec" to call the start/stop/reload commands.
+
+-Test if containers need to be restarted on reboot.
