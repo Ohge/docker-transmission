@@ -1,6 +1,8 @@
 # docker-transmission
 This is a user centric release of Transmission for Docker. When a user executes "install.sh" it automaticaly creates the mapped volumes in their home directory, assigns unused ports to the container, and runs the container proccess using their UID and GID giving them full ownership of any files created by the container process. Unlike other Transmission examples for Docker, this one is persistent even after being restarted, or rebuilt. Best of all it support multiple isolated users!
 
+This is still a "very alpha" release. Please check back for the finished project.
+
 Persistent user directories:
 
 ~/.docker-transmission
@@ -8,19 +10,20 @@ Persistent user directories:
 ~/downloads
 
 ## Requirements
+-Debian/Ubuntu base OS (other flavors untested yet)
 
 -Docker v1.6
 
 -Installing user must be in "docker" group
 
-## Installation
+## Install
 Clone the project
 > git clone https://github.com/Ohge/docker-transmission.git
 
 Execute the build script
 > ./install.sh
 
-## Uninstallation
+## Uninstall
 > ./uninstall.sh
 
 ## Usage
@@ -28,10 +31,10 @@ Open your browser to start using the Transmission torrent client
 > http://host:port
 
 ## Future releases
--Write dynamic bookmarks file to users home dir.
+-Update dynamic bookmarks RSS file to users home dir during install and uninstall.
 
--Verify user is in docker group before install and uninstall.
+-Add a persistent blocklist downloader to install and start scripts.
 
--Authenticate using username:transmission credentials.
+-Switch to init.d daemon start/stop/reload methods, and "tail -f" the transmission log file as CMD.
 
--Replace transmission web dir with username.
+-Add external scripts to users home dir that call "docker exec" the start/stop/reload commands.
