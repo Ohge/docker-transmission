@@ -1,0 +1,16 @@
+### APP VARS
+TYPE=svc
+NAME=transmission
+CONFIG_DIR=$HOME/.docker-transmission
+CONFIG_VOL=/etc/transmission-daemon
+USER_DIR=$HOME/downloads
+USER_VOL=/downloads
+GUI_PORT=9091
+P2P_PORT=54321
+
+### RUNTIME VARS
+USER=$(whoami)
+IMG=$TYPE/$NAME
+APP=$USER.$NAME
+LUID=$(id -u $USER)
+LGID=$(id -g $USER)
