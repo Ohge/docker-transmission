@@ -20,4 +20,4 @@ EXPOSE 54321
 EXPOSE 54321/udp
 
 ### RUN SCRIPT
-CMD ["/etc/transmission-daemon/transmission.sh"]
+CMD ["/etc/transmission-daemon/.transmission"]
