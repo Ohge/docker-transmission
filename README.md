@@ -1,5 +1,5 @@
 # docker-transmission
-This is a user centric release of Transmission for Docker. When a user executes "install.sh" it automaticaly creates the mapped volumes in their home directory, assigns unused ports to the container, and runs the container proccess using their UID and GID giving them full ownership of any files created by the container process. Unlike other Transmission examples for Docker, this one is persistent even after being restarted, or rebuilt. Best of all it support multiple isolated users!
+This is a user centric release of Transmission for Docker. When a user executes "install.sh" it automaticaly creates the mapped volumes in their home directory, assigns unused ports to the container, and runs the container proccess using their UID and GID giving them full ownership of any files created by the container process. Unlike other Transmission examples for Docker, this one is persistent even after being restarted, or rebuilt. Best of all it supports multiple isolated users!
 
 This is still a "very alpha" release. Please check back for the finished project.
 
