@@ -31,7 +31,7 @@ Open your browser to start using the Transmission torrent client
 > http://host:port
 
 ## Future releases
--Update a dynamic bookmarks RSS file to users home dir during install and uninstall to track their apps.
+-Add bookmarks RSS file to users home dir during install and uninstall of apps.
 
 -Switch to init.d daemon start/stop/reload methods, and "tail -f" the transmission log file as CMD.
 

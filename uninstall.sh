@@ -22,7 +22,7 @@ else echo "$APP was not removed!"; exit 1; fi
 ### REMOVE UNUSED IMAGES
 RES=$(docker ps -a | awk '{print $2}' | grep -c $IMG)
 if [ $RES -eq 0 ]; then
-  RES=$(docker rmi "$IMG")
+  #RES=$(docker rmi "$IMG")
   echo "$IMG uninstalled"
 fi
 

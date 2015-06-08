@@ -23,7 +23,13 @@ else echo -e "failed!\n$CMDRES"; exit 1; fi
 
 ### SETUP DOWNLOAD DIRECTORY
 printf "Installation of volume $USER_DIR "
-CMDRES=$(mkdir -p $USER_DIR)
+CMDRES=$(mkdir -p $USER_DIR/.incoming $USER_DIR/.incomplete)
+if [ $? -eq 0 ]; then echo "complete";
+else echo -e "failed!\n$CMDRES"; exit 1; fi
+
+### SETUP FETCH DIRECTORY
+printf "Installation of volume $FETCH_DIR "
+CMDRES=$(mkdir -p $FETCH_DIR)
 if [ $? -eq 0 ]; then echo "complete";
 else echo -e "failed!\n$CMDRES"; exit 1; fi
 
@@ -41,6 +47,7 @@ RUN=$(docker run -d \
 -e UID=$LUID \
 -e GID=$LGID \
 -v $CONFIG_DIR:$CONFIG_VOL \
+-v $FETCH_DIR:$FETCH_VOL \
 -v $USER_DIR:$USER_VOL \
 -p $LGUI_PORT:$GUI_PORT/tcp \
 -p $LP2P_PORT:$P2P_PORT/tcp \
