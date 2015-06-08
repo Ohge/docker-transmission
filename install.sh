@@ -44,6 +44,7 @@ echo "Installation of p2p_port $LP2P_PORT complete";
 ### RUN APP CONTAINER
 RUN=$(docker run -d \
 --name $APP \
+-h $HOSTNAME \
 -e UID=$LUID \
 -e GID=$LGID \
 -v $CONFIG_DIR:$CONFIG_VOL \

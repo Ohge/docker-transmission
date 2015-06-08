@@ -9,6 +9,8 @@ Persistent user directories:
 
 ~/downloads
 
+~/fetch
+
 ## Requirements
 -Debian/Ubuntu base OS (other flavors untested yet)
 
